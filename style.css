@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap');
+:root {
+    --red: #6d2e46;      /* rgb(109, 46, 70) */
+    --orange: #a26769;   /* rgb(162, 103, 105) */
+    --vanila: #d5b9b2;   /* rgb(213, 185, 178) */
+    --body: #ece2d0;     /* rgb(236, 226, 208) */
+    --white: #fff;
+    --text: #333;
+}
+/******************************
+basic style
+******************************/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--body);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+button {
+    padding: 15px 40px;
+    text-transform: uppercase;
+    background: var(--red);
+    border: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: var(--white);
+}
+button:hover {
+    background: var(--orange);
+    cursor: pointer;
+}
+/******************************
+header
+******************************/
+header {
+    background-image: linear-gradient(rgba(162,103,105,.9),rgba(236, 226, 208,.99)),url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    text-align: center;
+}
+header hgroup {
+    padding: 100px;
+}
+header hgroup i {
+    font-size: 5rem;
+    color: var(--red);
+}
+header hgroup h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--white);
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+header hgroup p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+/******************************
+tehnologije
+******************************/
+.tehnologije {
+    text-align: center;
+    padding-top: 100px;
+}
+.tehnologije article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tehnologije article div {
+    flex: 0 0 23%;
+}
+.tehnologije article h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.tehnologije article i {
+    font-size: 4.5rem;
+    color: var(--red);
+    padding:30px 0;
+}
+.tehnologije article p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.tehnologije button {
+    margin-bottom: 50px;
+}
+/******************************
+knjige
+******************************/
+.knjige {
+    background:var(--orange);
+    padding: 50px;
+    text-align: center;
+    color: var(--white);
+}
+.knjige article {
+    display: flex;
+    justify-content: space-between;
+}
+.knjige article div {
+    padding: 30px;
+}
+
+.knjige article div img {
+    width: 100%;
+}
+.knjige article div p {
+    text-align: justify; 
+}
+.knjige button:hover {
+    border: 1px solid var(--red);
+}
+/******************************
+blog
+******************************/
+.blog {
+    text-align: center;
+}
+.blog h2 {
+    font-size: 3rem;
+    margin-top: 50px;
+}
+.blog h2 + p {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.blog article {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0;
+}
+.blog article div {
+    flex: 0 0 30%;
+}
+.blog article div p {
+    margin: 30px;
+    font-size: 1;
+}
+.blog article div img {
+    width: 100%;
+}
+/******************************
+footer
+******************************/
+footer {
+    background: var(--red);
+    text-align: center;
+    color: var(--white);
+    padding: 80px;
+}
+/******************************
+responsive
+******************************/
+@media(max-width: 768px){
+    header {
+        height: 90vh;
+    }
+    header hgroup h1 {
+        font-size: 2rem;
+    }
+    header hgroup i {
+        font-size: 4rem;
+    }
+    .tehnologije article div {
+        flex: 100%;
+    }
+    .container {
+        width: 90%;
+    }
+    .knjige article, .blog article {
+        flex-direction: column;
+    }
+    .tehnologije article div, .blog article div {
+        padding: 15px;
+        margin-bottom: 30px;
+    }
+    .tehnologije, .knjige, .blog {
+        padding: 50px 0;
+    }
+    .blog h2 + p {
+        font-size: 1rem;
+    }
+    .blog h2 {
+        font-size: 2rem;
+    }
+}
